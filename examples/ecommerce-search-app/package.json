@@ -1,0 +1,17 @@
+{
+  "name": "ecommerce-search-app",
+  "version": "0.0.1",
+  "description": "AIReact E-commerce Search App Example",
+  "private": true,
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "aireact": "workspace:*"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "typescript": "^5.0.0"
+  }
+}
