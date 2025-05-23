@@ -7,7 +7,17 @@ export interface AIReactNode {
     children: AIReactNode[];
   };
   dom?: Node; // Optional: reference to the actual DOM node
+
+  // Fields for components and their state/rendering
+  instance?: ComponentInstance; // Holds state specific to a component instance
 }
+
+export interface ComponentInstance {
+  vNode: AIReactNode; // Back-reference to the host AIReactNode
+  renderedVNode?: AIReactNode; // The direct VDOM output of this component function
+  hookStates: any[];
+  currentHookIndex: number;
+  parentDom?: Node; // The DOM node that contains this component's rendered output
 
 export function createElement(
   type: string | Function | typeof Fragment,
