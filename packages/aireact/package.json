@@ -1,0 +1,32 @@
+{
+  "name": "aireact",
+  "version": "0.0.1",
+  "description": "A React-like frontend framework.",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./jsx-runtime": {
+      "import": "./dist/esm/jsx-runtime.js",
+      "require": "./dist/jsx-runtime.js",
+      "types": "./dist/jsx-runtime.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && tsc --project tsconfig.build.json --module esnext --outDir dist/esm && tsc --project tsconfig.build.json --module commonjs --resolveJsonModule true --outDir dist --declaration false --emitDeclarationOnly false --esModuleInterop src/jsx-runtime.ts && mv dist/jsx-runtime.js dist/jsx-runtime.js && tsc --project tsconfig.build.json --module esnext --resolveJsonModule true --outDir dist/esm --declaration false --emitDeclarationOnly false --esModuleInterop src/jsx-runtime.ts && mv dist/esm/jsx-runtime.js dist/esm/jsx-runtime.js && tsc --project tsconfig.build.json --declaration --emitDeclarationOnly --outFile dist/jsx-runtime.d.ts src/jsx-runtime.ts",
+    "dev": "tsc --watch --project tsconfig.build.json"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

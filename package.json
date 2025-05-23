@@ -1,0 +1,39 @@
+{
+  "name": "aireact-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenanine/AIReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenanine/AIReact/issues"
+  },
+  "homepage": "https://github.com/chenanine/AIReact#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "lerna": "^8.2.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}

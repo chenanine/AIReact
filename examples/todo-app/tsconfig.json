@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "jsxImportSource": "aireact",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "paths": {
+      "aireact": ["../../packages/aireact/src/index"],
+      "aireact/jsx-runtime": ["../../packages/aireact/src/jsx-runtime"]
+    }
+  },
+  "include": ["src"]
+}
